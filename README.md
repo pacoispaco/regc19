@@ -2,6 +2,41 @@
 
 An idea for a simple app for people to register Covid-19 symptoms in the absence of proper medical tests
 
+# Description (English)
+
+An application where anyone can go in and register:
+
+ * I have been tested positive (with a test) #days ago and I am still ill.
+ * I have been tested positive (with a test) #days ago but feel weel now since #days.
+ * I am very sure I have Corona. I estimate that I have been sick for # days.
+ * I am quite sure I have Corona. I estimate that I have been sick for # days.
+ * I have not been sick for # days.
+ * My postal code (postnummer in Sweden).
+
+Registration is done anonymosuly. There is no registration of personal identity information such as mailadress,
+mobila phone mumber etc. except for the postal code.
+
+An additional feature is to have a self-assessment test of Covid-19 symptoms. The test would consist of 5-15 questions about symptoms and would result in an assessment score of say **90% chance, 60% chance, 30% chance** and **small risk of having Covid-19** assesment.
+
+This would enable one to get a reasonable estimate of the number of infected and where they are geographically. Of course therer would be a lot of noise and risk of faulty assements, but in the absence of proper medical tests, one would get a reasonable estimate of the spread of Covid-19.
+
+What is needed is:
+
+ * A frontend app for registration. A webbapp is probably better than a mobile app. Add a CAPTCHA to restrict scripting/bot attacks.
+ * A backend API where registered data is stored.
+ * A backend API where data can be accessed. An open API. No registration needed and no API-key.
+
+Some success factors:
+
+ * As easy as possible to register data.
+ * Minimize integrity issues.
+ * Engage someone with medicial expertise to assess tha value of this idea and who can assist in developing the self-assesment test.
+
+Suggested technologies:
+
+ * Python for Backend.
+ * MongoDB or Redis for persistance.
+ * Vue-js for frontend.
 # Description (Swedish)
 
 En sajt där vem som helst kan gå in och registrera:
@@ -33,38 +68,4 @@ Några key success-faktorer är:
  * Minimera integritetsproblematiken!
  * Få tag på någon medicinskt kompetent som kan säga om detta skulle ge något och som kan vara med och utforma ett bra "Corona self-assesment test" för detta ändamål.
 
-# Description (English)
 
-An application where anyone can go in and register:
-
- * I have been tested positive (with a test) #days ago and I am still ill.
- * I have been tested positive (with a test) #days ago but feel weel now since #days.
- * I am very sure I have Corona. I estimate that I have been sick for # days.
- * I am quite sure I have Corona. I estimate that I have been sick for # days.
- * I have not been sick for # days.
- * My postal code (postnummer in Sweden).
-
-Registration is done anonymosuly. There is no registration of personal identity information such as mailadress,
-mobila phone mumber etc. except for the postal code.
-
-An additional feature is to have a self-assessment test of Covid-19 symptoms. The test would consist of 5-15 questions about symptoms and would result in an assessment score of say **90% chance, 60% chance, 30% chance** and **small risk of having Covid-19** assesment.
-
-This would enable one to get a reasonable estimate of the number of infected and where they are geographically. Of course therer would be a lot of noise and risk of faulty assements, but in the absence of proper medical tests, one would get a reasonable estimate of the spread of Covid-19.
-
-What is needed is:
-
- * A frontend app for registration. A webbapp is probably better than a mobile app. Add a CAPTCHA to restrict scripting/bot attacks.
- * A backend API where registered data is stored.
- * A backend API where data can be accessed. An open API. No registration needed and no API-key.
-
-Some success factors:
-
- * As easy as possible to register data.
- * Minimize integrity issues.
- * Engage someone with medicial expertise to asses tha value of this idea and who can assist in developing the self-assesment test.
-
-Suggested technologies:
-
- * Python for Backend.
- * MongoDB or Redis for persistance.
- * Vue-js for frontend.
